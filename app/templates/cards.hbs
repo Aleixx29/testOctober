@@ -1,0 +1,22 @@
+<article class="products-listing">
+    {{#each this.model as |card|}}
+    <img src={{card.image}} alt="Ocotber products">
+    <div class="details">
+        <h3>{{card.title}}</h3>
+        <div class="details-date">
+            <span>{{card.date}}</span>
+        </div>
+        <div class="details-rate">
+            <span>{{card.rate}} &#183; {{card.time}}</span>
+        </div>
+        <div class="details-amount">
+            <span>&#8364; {{card.amount}}</span>
+        </div>
+        <div class="details-grade">
+            <ul>
+                <li>{{card.grade}}</li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</article>
