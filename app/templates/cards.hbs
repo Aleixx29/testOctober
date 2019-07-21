@@ -1,22 +1,5 @@
 <div>
-    {{#each this.model as |card|}}
-        <article class="listing">
-            <img src={{card.image}} alt="">
-            <div class="details">
-                <h3>{{card.title}}</h3>
-                <div class="detail date">
-                    <span>{{card.date}}</span>
-                </div>
-                <div class="detail rate">
-                    <span>{{card.rate}} &#183; {{card.time}}</span>
-                </div>
-                <div class="detail amount">
-                    <span>&#8364;{{card.amount}}</span>
-                </div>
-                <div class="detail grade">
-                    <span>{{card.grade}}</span>
-                </div>
-            </div>
-        </article>
+    {{#each this.model as |cardUnit|}}
+        <CardListing @card={{cardUnit}} />
     {{/each}}
 </div>
