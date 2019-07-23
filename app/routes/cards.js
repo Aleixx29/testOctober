@@ -2,7 +2,8 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
     model(){
-        return [{
+        return this.store.findAll('projects');
+        /*return [{
             id: 'toto',
             title: 'Test',
             date: '11 days ago',
@@ -29,6 +30,6 @@ export default Route.extend({
             amount: 100000,
             image: '#',
             grade: 'A'
-        }];
+        }];*/
     }
 });
